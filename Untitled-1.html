@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+    function action_coords(event) {
+        var x1 = event.clientX;
+        var y1 = event.clientY;
+        var x2 = event.offsetX;
+        var y2 = event.offsetY;
+        var x3 = event.screenX;
+        var y3 = event.screenY;
+        var coords = "clientX: " + x1 + ", clientY: " + y1 + "<br/>";
+        coords += "offsetX: " + x2 + ", offsetY: " + y2 + "<br/>";
+        coords += "screenX: " + x3 + ", screenY: " + y3;
+        document.getElementById("debug_out").innerHTML = coords;
+    }
+    
+    
+    // for  (let i = 0; i < 980 ; i++){
+    
+    // 	setTimeout(() => {
+    // 		if(i < 100){
+    // 			$('.boll').css('left', 90+i);
+    // 		}else if(100<= i < 500){
+    // 			$('.boll').css('left', 90+i);
+    // 			$('.boll').css('top', 430-(i-100));
+    // 		}
+    // 	},100*i)
+         
+    // }
+    
+    $('.btn').on('click', function(){
+        $('.boll').toggleClass('ani');
+    })
+    </script>
+    <style>
+        body{
+	display:block;
+	width:1138px;
+	height:712px;
+}
+.back-img{
+	width:1138px;
+	height:712px;
+	background:#000;
+	background: url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b6714ed3-3b44-4aa2-9ea2-635b1a255292/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220402T134309Z&X-Amz-Expires=86400&X-Amz-Signature=8668afc1945cbfa12f8f89ef7b13d063e18942c8c3cf269afe48c3c5b366fec0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25EB%258B%25A4%25EC%259A%25B4%25EB%25A1%259C%25EB%2593%259C.png%22&x-id=GetObject);
+	background-repeat:no-repeat;
+	background-size:1200px auto;
+	background-position:top -70px left -10px;
+	overflow:hidden;
+	opacity:.5;
+	z-index:1;
+	position:relative;
+	top:-75px;
+}
+.btn{
+	background: #111;
+	color:#fff;
+	border:none;
+	padding:20px;
+	position:absolute;
+	top: 730px;
+	left:50px;
+}
+
+.boll{
+	display:block;
+	width:55px;
+	height:75px;
+	background: #550000;
+	z-index:20;
+	/* // opacity:.8; */
+	/* // border-radius:0px 50px 50px 0px; */
+	top:430px;
+	left: 90px;	
+	position: relative;
+}
+
+.ani{
+  	animation-name: boll;
+  	animation-duration: 10s;
+  	animation-timing-function: linear;
+ 	animation-iteration-count: inherit;
+ 	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+
+@keyframes boll {
+	0%   {left:90px; top:430px;} 
+    /* //1 */
+ 	5%  {left:280px; top:430px;} 
+     /* //2 */
+	6%  {left:298px; top:420px;}
+	7%  {left:308px; top:415px;}
+	8%  {left:318px; top:400px;}
+	9%  {left:328px; top:350px;}
+	10%  {left:330px; top:320px;} 
+	11%  {left:328px; top:300px;}
+	12%  {left:318px; top:290px;}
+	13%  {left:308px; top:280px;}
+	14%  {left:298px; top:270px;}
+	15%  {left:280px; top:260px;} 
+    /* //4 */
+	20%  {left:200px; top:260px;} 
+	22.5%  {left:150px; top:290px;}
+	25%  {left:140px; top:320px;} 
+    /* //3 */
+	27.5%  {left:150px; top:350px;}
+	30%  {left:200px; top:370px;} 
+	38%  {left:460px; top:370px;} 
+    /* //5 */
+	39%  {left:470px; top:400px;}
+	40%  {left:480px; top:435px;} 
+    /* //1 */
+	45%  {left:600px; top:435px;}
+	50%  {left:640px; top:350px;} 
+    /* //2 */
+	52%  {left:650px; top:320px;}
+	54%  {left:660px; top:300px;}
+	56%  {left:670px; top:275px;}
+	58%  {left:700px; top:270px;}
+	65%  {left:920px; top:270px;}
+	70%  {left:950px; top:320px;} 
+    /* //1 */
+	75%  {left:920px; top:360px;}
+	80%  {left:820px; top:360px;}
+	82%  {left:800px; top:380px;}
+	84%  {left:780px; top:410px;} 
+    /* //2 */
+	86%  {left:800px; top:430px;}
+	90%  {left:820px; top:430px;}
+	100%  {left:1020px; top:430px;} 
+    /* //finish */
+}
+    </style>
+</head>
+<body>
+	<div class="boll" name="boll" ></div>
+	<div class="back-img" id="debug_out" onclick="action_coords(event)"></div>
+	<button class="btn">play</button>
+</body>
+</html>
