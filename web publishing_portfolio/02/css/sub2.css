@@ -1,0 +1,335 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Noto+Sans+KR&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    font-size:1em;
+    min-width:320px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+img, button, div{
+    border:none;
+    outline: none;
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* 레이아웃 스타일 */
+nav{
+    width: 220px;
+    height: 980px;
+    position: fixed;
+    background-color: #17322F;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+}
+
+
+/* nav */
+nav .gnb_area{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 190px;
+    height: 889px;
+    left: 17px;
+    top: 68px;
+}
+
+nav .gnb_area a{
+    position: static;
+    width: 190px;
+    height: 75px;
+    order: 0
+}
+nav .gnb_area a img{
+    width: auto;
+    height: 100%;
+    flex: none;
+    margin: 0 35px;
+}
+
+nav .gnb_area .gnb{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 68.5px 0px;
+    box-sizing: border-box;
+
+    position: static;
+    width: 190px;
+    height: 405px;
+
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+    margin: 137px 0px;
+}
+nav .gnb_area .gnb li{
+    width: 190px;
+    height: 53px;
+}
+nav .gnb_area .gnb li a{
+    position: absolute;
+    width: 190px;
+    height: 53px;
+    padding: 16px 0 0 69px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #fff;
+}
+nav .gnb_area .gnb li a:hover{
+    background-color: #fff;
+    color: #17322F;
+}
+
+footer{
+    position: absolute;
+    width: 189px;
+    height: 135px;
+    top: 754px;
+    order: 2;
+}
+footer .sns{
+    display: block;
+    width: 130px;
+    height: 20px;
+}
+footer .sns li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+footer .sns li a img{
+    width: 20px;
+    height: 20px;
+}
+
+footer p{
+    position: absolute;
+    width: 190px;
+    height: 84px;
+    bottom: 15px;
+
+    font-family: 'Roboto';
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    }
+
+
+/* section */
+section{
+    position: absolute;
+    right: 0px;
+    width: 1700px;
+    height: 100%;
+    background: url(../img/sub2/tilebg.png)no-repeat;
+}
+
+section>h3{
+    position: absolute;
+    width: 111px;
+    height: 43px;
+    left: calc(50% - 55.5px);
+    top: 94.5px;
+
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 1.875rem;
+    font-weight: 900;
+
+    color: #17322f;
+}
+
+
+section .menu_gnb{
+    position: absolute;
+    height: 27px;
+    left: calc(50% - 141.25px);
+    top: 144px;
+}
+section .menu_gnb>li{
+    float: left;
+}
+section .menu_gnb>li>a:hover{
+    border-radius:20px;
+    background-color: #E8C248;
+}
+section .menu_gnb>li>a{
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.125rem;
+    color: #000;
+    padding: 5px 25px;
+}
+
+
+
+section #menu{
+    position: absolute;
+    width: 1450px;
+    height: 588px;
+    left: calc(50% - 685px);
+    top: 244px;
+}
+section #menu>div{
+    margin: 0px 38.5px;
+}
+section #menu .Pr1 .PrBG{
+    width: 272px;
+    height: 323px;
+    border-radius: 160px;
+    background-color: #E8C248;
+    margin-top: 0;
+}
+section #menu .Pr1 .PrBG:hover{
+    background: url(../img/sub2/1_bg.png);
+}
+section #menu .Pr2 .PrBG:hover{
+    background: url(../img/sub2/2_bg.png);
+}
+section #menu .Pr3 .PrBG:hover{
+    background: url(../img/sub2/3_bg.png);
+}
+section #menu .Pr4 .PrBG:hover{
+    background: url(../img/sub2/4_bg.png);
+}
+section #menu .Pr5 .PrBG:hover{
+    background: url(../img/sub2/5_bg.png);
+}
+
+section #menu .Pr1 .PrBG>img{
+    padding-top: 119px;
+    margin-left: -8px;
+    box-sizing: border-box;
+    width: 280px;
+    z-index: 20px;
+}
+section #menu .text{
+    width: 155px;
+    height: 127px;
+    margin-left: 60px;
+    margin-top: 107px;
+
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 20px;
+    text-align: center;
+    color: #444
+}
+section #menu .text span{
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #17322f;
+}
+section #menu .text .tit{
+font-family: 'Bad Script';
+font-size: 1.25rem;
+line-height: 30px;
+text-align: center;
+color: #17322F;
+padding-bottom: 5px;
+} 
+
+section #menu .slick-prev{
+    position: absolute;
+    width: 36px;
+    height: 64px;
+    left: -78px;
+    top: 193px;
+    text-indent: -9999px;
+    background: url(../img/sub2/prev.png) no-repeat center center;
+}
+section #menu .slick-next{
+    position: absolute;
+    width: 36px;
+    height: 64px;
+    right: -10px;
+    top: 193px;
+    text-indent: -9999px;
+    background: url(../img/sub2/next.png) no-repeat center center;
+}
+
+
+
+section .secBtn{
+    position: absolute;
+    width: 485px;
+    height: 38px;
+    left: calc(50% - 240px);
+    top: 859px;
+}
+section .secBtn li:first-child{
+    margin-right: 83px;
+}
+section .secBtn li{
+    float: left;
+    width: 201px;
+    height: 38px;
+    text-align: center;
+}
+
+
+section .secBtn li a{
+	position:relative;
+	display:inline-block;
+	width:100%;
+	max-width:210px;
+    height: 100%;
+
+	border-radius: 25px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 36px;
+	text-align: center;
+	z-index:1;
+	overflow:hidden;
+}
+section .secBtn li a{
+	border: solid 3px #17322f;
+	color:#17322f;
+	background:transparent;
+	transition:  all 0.5s ;
+}
+section .secBtn li a:before {
+	content:'';
+	position:absolute;
+	width:0;
+	height:100%;
+	top:0;
+	left:0;
+	background:#17322f;
+	border-radius:15px;
+	opacity:0.15;
+	transition: all 0.5s ;
+    z-index: -1;
+}
+section .secBtn li a:hover:before {
+	width:100%;
+	opacity:1;
+}
+section .secBtn li a:hover{
+	color:#fff;
+}
