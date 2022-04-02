@@ -1,0 +1,503 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Kaushan+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Gothic', sans-serif;
+    color: #000;
+    font-size:1em;
+    width: 100vw;
+    /* width: 1920px; */
+    height: auto;
+    min-width:480px;
+    /* max-width: 1920px; */
+    margin: 0 auto;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+img, button{
+    border:none;
+    outline: none;
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* 레이아웃 스타일 */
+
+header{
+    display: flex;
+    width: 100%;   
+    height: 1064px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+header .bg01{
+    position: absolute;
+    width: 933px;
+    height: 832px;
+    left: 60%;
+}
+
+.Logo{
+    width: 100%;
+    height: 100%;
+
+}
+.cir{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 44.5%;
+    top: 400px;
+
+    background: #000;
+    filter: blur(15px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+h1{
+    position: absolute;
+    width: 211px;
+    height: 174px;
+    left: 46%;
+    top: 416px;
+
+    font-family: 'Kaushan Script';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.75rem;
+    line-height: 87px;
+    color: #000;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 0px;
+    position: absolute;
+    width: 55.4%;
+    height: 0px;
+    left: 22.3%;
+    top: 782px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.menu li{
+    width: 53px;
+    height: 73px;
+    margin: -37px 35px 0px 35px;
+}
+.menu li a{
+    display: block;
+    position: absolute;
+    width: 73px;
+    height: 25px;
+    
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #000;
+    opacity: 0.7;
+}
+.menu li a:hover{
+    opacity: 1;
+}
+.menu li a span{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    padding-right: 5px;
+}
+.menu li a img{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    padding-top: 10px;
+}
+
+/* section */
+section{
+    position: relative;
+    width: 100%;
+    height: 1064px;
+    background-color:#fff;
+}
+#about .about_inner{
+    position: absolute;
+    width: 550px;
+    height: 597px;
+    left: calc(50% - 260px);
+    top: 234px;
+}
+#about .about_inner .mark{
+    position: absolute;
+    width: 50px;
+    font-family: 'Kaushan Script';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.125rem;
+    color: #000;
+    padding: 0 10px 0 0;
+}
+#about .about_inner .mark2{
+    right: 0;
+    padding: 0 0 0 11px;
+}
+#about .about_inner .about_inner_text{
+    position: absolute;
+    width: 430px;
+    height: 520px;
+    margin-left: 60px;
+    background: #000;
+    padding: 0 31px 0 31px;
+    box-sizing: border-box;
+}
+#about .about_inner .about_inner_text span{
+    display: inline-block;
+    font-family: 'Kaushan Script';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.125rem;
+    color: #fff;
+    margin: 129px 0px 17px 0px;
+}
+#about .about_inner .about_inner_text p{
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #fff;
+}
+.bg_02{
+    position: absolute;
+    width: 873px;
+    height: 794px;
+    left: 66.6%;
+    top: 1665px;
+    z-index: 10;
+}
+
+
+/* section2 */
+#skill{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+
+    /* min-width: 1240px; */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #333;
+}
+#skill .sk{
+    width: 25%; /* width: 470px; */
+    height: 100vh;
+    border: none;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 0.5px solid #555;
+    box-sizing: border-box;
+}
+#skill .skill1{
+    background: url(../img/skill_01.png)no-repeat;
+    overflow: cover;
+    position: relative;
+}
+#skill .skill1 .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    min-width: 300px;
+    min-height: 300px;
+    margin: 0 auto;
+    background-color: #000;
+    /* opacity: 0.9; */
+    display: none;
+}
+#skill .skill1 .bg>.tt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+#skill .skill1 .bg>.tt p{
+    padding-left: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25em;
+    line-height: 37px;
+    color: #fff;
+}
+#skill .skill1 .bg>.tt span{
+    position: absolute;
+    right: 10%;
+    color: #861d1d;
+}
+#skill .skill1:hover .bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#skill .skill2{
+    background: url(../img/skill_02.png)no-repeat center;
+    overflow: cover;
+}
+#skill .skill3{
+    background: url(../img/skill_03.png)no-repeat center;
+    overflow: cover;
+}
+#skill .skill4{
+    background: url(../img/skill_04.png)no-repeat center;
+    overflow: cover;
+}
+#skill .skill1:hover{
+    background: url(../img/skill_01_.png)no-repeat;
+}
+#skill .skill2:hover{
+    background: url(../img/skill_02_.png)no-repeat center;
+}
+#skill .skill3:hover{
+    background: url(../img/skill_03_.png)no-repeat center;
+}
+#skill .skill4:hover{
+    background: url(../img/skill_04_.png)no-repeat center;
+}
+#skill .sk .text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+}
+#skill .sk .text p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.625rem;
+    color: #fff;
+}
+
+#skill .sk .text span{
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 62px;
+    color: #fff;
+    padding-top: 50px;
+}
+#skill .sk:hover .text span{
+    color: #861d1d;
+}
+
+.pass{
+    height: 200px;
+}
+
+
+
+/* section3 */
+#project{
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+}
+#project .pro{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    /* flex-wrap: wrap; */
+}
+#project .pro .img{
+    display: flex;
+    width: 50%;
+    min-width: 720px;
+    height: 850px;
+    background: url(../img/02_img.png)no-repeat;
+}
+#project .pro:hover .img{
+    background: url(../img/02_img_c.png)no-repeat;
+}
+#project .pro .txt{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 720px;
+    height: 850px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+#project .pro .txt .txt_tit{
+    width: 100%;
+    height: 200px;
+    text-align: right;
+    padding-top: 100px;
+}
+#project .pro .txt h4{
+    font-family: 'Kaushan Script';
+    font-size: 6rem;
+}
+#project .pro .txt h2{
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+}
+#project .pro .txt h3{
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#project .pro .txt .txt_tit a{
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000;
+    background-color: #999;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 1;
+}
+#project .pro .txt .txt_tit a:hover{
+    box-sizing: border-box;
+    color: #000;
+    background-color: #c4c4c4;
+    opacity: 0.8;
+}
+
+
+#project .pro .txt table{
+    width: 288px;
+    height: 30%;
+}
+#project .pro .txt table tr{
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+#project .pro .txt tr .tit{
+    width: 100px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.825rem;
+}
+#project .pro .txt tr .info{
+    width: 300px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #000;
+    /* display: inline-block; */
+}
+#project .pro .txt tr:nth-child(5) .tit{
+    height: 90px;
+}
+#project .pro .txt tr:nth-child(6) .tit{
+    height: 60px;
+}
+
+
+
+
+/* pro2 */
+#project .pro2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row;
+}
+#project .pro2>.img{
+    display: flex;
+    width: 720px;
+    height: 850px;
+    background: url(../img/01_img.png)no-repeat;
+}
+#project .pro2:hover .img{
+    background: url(../img/01_img_c.png)no-repeat;
+}
+#project .pro2 .txt{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    width: 720px;
+    height: 850px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+#project .pro2 .txt .txt_tit{
+    width: 100%;
+    height: 200px;
+    text-align: left;
+    padding-top: 100px;
+}
+#project .pro2 .txt>table{
+    width: 288px;
+    height: 30%;
+}
+
+
+
+/* pro3 */
+#project .pro3{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row;
+}
+#project .pro3>.img{
+    display: flex;
+    width: 720px;
+    height: 850px;
+    background: url(../img/03_img.png)no-repeat;
+}
+#project .pro3:hover .img{
+    background: url(../img/03_img_c.png)no-repeat;
+}
+#project .pro3 .txt{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 720px;
+    height: 850px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+
+footer{
+    height: 200px;
+    background-color: #000;
+}
