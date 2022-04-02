@@ -5,40 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script>
-    function action_coords(event) {
-        var x1 = event.clientX;
-        var y1 = event.clientY;
-        var x2 = event.offsetX;
-        var y2 = event.offsetY;
-        var x3 = event.screenX;
-        var y3 = event.screenY;
-        var coords = "clientX: " + x1 + ", clientY: " + y1 + "<br/>";
-        coords += "offsetX: " + x2 + ", offsetY: " + y2 + "<br/>";
-        coords += "screenX: " + x3 + ", screenY: " + y3;
-        document.getElementById("debug_out").innerHTML = coords;
-    };
-    
-    
-    // for  (let i = 0; i < 980 ; i++){
-    
-    // 	setTimeout(() => {
-    // 		if(i < 100){
-    // 			$('.boll').css('left', 90+i);
-    // 		}else if(100<= i < 500){
-    // 			$('.boll').css('left', 90+i);
-    // 			$('.boll').css('top', 430-(i-100));
-    // 		}
-    // 	},100*i)
-         
-    // }
-    
-    $('.btn').on('click', function(){
-        $('.boll').toggleClass('ani');
-    })
-    </script>
     <style>
         body{
 	display:block;
@@ -67,6 +35,9 @@
 	position:absolute;
 	top: 730px;
 	left:50px;
+}
+.btn:active{
+	background: #777;
 }
 
 .boll{
@@ -141,8 +112,28 @@
     </style>
 </head>
 <body>
-	<div class="boll" name="boll" ></div>
+	<div class="boll _ani" name="boll" ></div>
 	<div class="back-img" id="debug_out" onclick="action_coords(event)"></div>
 	<button class="btn">play</button>
 </body>
+
+<script>
+    // function action_coords(event) {
+    //     var x1 = event.clientX;
+    //     var y1 = event.clientY;
+    //     var x2 = event.offsetX;
+    //     var y2 = event.offsetY;
+    //     var x3 = event.screenX;
+    //     var y3 = event.screenY;
+    //     var coords = "clientX: " + x1 + ", clientY: " + y1 + "<br/>";
+    //     coords += "offsetX: " + x2 + ", offsetY: " + y2 + "<br/>";
+    //     coords += "screenX: " + x3 + ", screenY: " + y3;
+    //     document.getElementById("debug_out").innerHTML = coords;
+    // };
+    
+        
+    $('.btn').on('click', function(){
+        $('.boll').toggleClass('ani');
+    });
+    </script>
 </html>
